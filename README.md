@@ -60,7 +60,7 @@ If you want to invite your bot you must create an Invite URL for it
 
 There are 2 methods provided on how to do it
 1. [Modifying the URL Provided](#1-modifying-the-url-provided)
-2. [Generating the Invite URL](axiehelper-qr#2-generating-the-invite-url)
+2. [Generating the Invite URL](#2-generating-the-invite-url)
 
 #### 1. Modifying the URL Provided
 First you need to copy your `Client ID` at `OAuth2` then `General` and copy the `Client ID`
@@ -128,6 +128,8 @@ For `SERVER_ID`, `DISCORD_USER_ID_1`, and `DISCORD_USER_ID_2` you can follow thi
 **Save your changes and the bot is now ready**
 
 **Run `start.bat` to launch your Discord Bot!**
+
+![image](https://i.imgur.com/b0N4bgU.png)
 
 You need to keep the process running in order for the commands to work.
 You can also look for hosting providers that will run the your bot 24/7.
