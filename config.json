@@ -1,5 +1,9 @@
 {
   "client_token": "DISCORD_BOT_TOKEN",
+  "client_status": {
+    "type": "PLAYING",
+    "description": "Axie Infinity"
+  },
   "guild_id": "SERVER_ID",
   "scholars": [
     {
