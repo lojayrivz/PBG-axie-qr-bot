@@ -1,6 +1,6 @@
 {
   "name": "axie-qr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Discord Bot to generate a QR Code for Axie Infinity Scholars",
   "main": "app.js",
   "scripts": {
