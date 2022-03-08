@@ -3,7 +3,7 @@ const { client_token } = require('./config.json')
 const fs = require('fs')
 
 const client = new Client({
-    allowedMentions: { repliedUser: true, parse: ['users', 'roles'] },
+    allowedMentions: { parse: ['users', 'roles'] },
     intents: [
         Intents.FLAGS.GUILDS,
         Intents.FLAGS.GUILD_MESSAGES,
@@ -16,18 +16,18 @@ const client = new Client({
     ]
 })
 
+// Bot Commands Handler
 client.slashCommands = new Collection();
-
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'))
 for (const [index, file] of commandFiles.entries()) {
     const command = require(`./commands/${file}`)
     client.slashCommands.set(command.config.name, command)
 
-    const slashCmdName = `[${command.config.name}]`
-    const slashCmdIndex = `[${index + 1}]`
-    console.log(`${slashCmdIndex} Loaded ${slashCmdName} command`)
+    const slashCmdName = `/${command.config.name}`
+    console.log(`[${index + 1}] Loaded ${slashCmdName} command`)
 }
 
+// Bot Events Handler
 fs.readdir('./events/', (err, files) => {
     if (err) return console.error(err);
     files.forEach(file => {
