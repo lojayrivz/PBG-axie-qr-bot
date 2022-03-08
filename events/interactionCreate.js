@@ -5,6 +5,10 @@ module.exports = async (client, interaction) => {
     if (!interaction.isCommand()) return
     if (!client.slashCommands.has(interaction.commandName)) return
 
+    // Command Logger
+    const timeRightNow = new Date().toLocaleString()
+    console.log(`[${timeRightNow}] ${interaction.user.tag} (${interaction.user.id}) used /${interaction.commandName} command`)
+
     const command = client.slashCommands.get(interaction.commandName)
 
     if (!interaction.inGuild() && command.settings.guildOnly) return interaction.reply({ content: 'You need to be in a server to use this command.', ephemeral: true })
