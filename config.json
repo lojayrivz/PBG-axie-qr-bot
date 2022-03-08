@@ -1,5 +1,6 @@
 {
   "client_token": "DISCORD_BOT_TOKEN",
+  "anticaptcha_key": "API_KEY",
   "client_status": {
     "type": "PLAYING",
     "description": "Axie Infinity"
