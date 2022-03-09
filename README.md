@@ -1,12 +1,18 @@
 # AxieHelper-QR
-### A Discord Bot to generate a QR Code for Axie Infinity.
+#### A Discord Bot to generate a QR Code for Axie Infinity.
+- Uses Email and Password
+- Captcha Solver
+- Data Caching
+- Easily Customizable
+
 #### Commands:
 - `qr` - Generate a QR Code.
 
 ![image](https://i.imgur.com/l1Udc6b.png)
 
 # Requirements
-- Node.js version 16.6 or higher
+- [Node.js](https://nodejs.org/en/) version 16.6 or higher
+- [Anti Captcha API Key](https://anti-captcha.com/)
 - Discord Bot Token
 - Discord Server ID & Discord User ID
 - Axie Infinity Email and Password
@@ -101,6 +107,11 @@ In your discord bot folder, open the `config.json` and it should look like this:
 ```json
 {
   "client_token": "DISCORD_BOT_TOKEN",
+  "anticaptcha_key": "API_KEY",
+  "client_status": {
+    "type": "PLAYING",
+    "description": "Axie Infinity"
+  },
   "guild_id": "SERVER_ID",
   "scholars": [
     {
@@ -123,9 +134,12 @@ In your discord bot folder, open the `config.json` and it should look like this:
 ```
 Replace the `DISCORD_BOT_TOKEN` to what you just copied
 
+For `API_KEY` you'll need an [anti-captcha](https://anti-captcha.com) account.
+You can find your API key on [API Settings](https://anti-captcha.com/clients/settings/apisetup) page after creating an account
+
 For `SERVER_ID`, `DISCORD_USER_ID_1`, and `DISCORD_USER_ID_2` you can follow this [guide](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to find the Server ID and User ID
 
-**Save your changes and the bot is now ready**
+Save your changes and the bot is now ready
 
 **Run `start.bat` to launch your Discord Bot!**
 
